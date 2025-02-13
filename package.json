@@ -4,8 +4,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "babel src --out-dir lib",
-    "dev": "http-server lib -p 9000"
+    "babel:compile": "babel src --out-dir lib",
+    "webpack:build": "webpack",
+    "webpack:dev": "webpack-dev-server --mode development"
   },
   "keywords": [],
   "author": "Seungrok Yoon",
@@ -20,6 +21,11 @@
     "@babel/core": "^7.26.8",
     "@babel/preset-env": "^7.26.8",
     "@babel/preset-react": "^7.26.3",
-    "http-server": "^14.1.1"
+    "babel-loader": "^9.2.1",
+    "html-webpack-plugin": "^5.6.3",
+    "http-server": "^14.1.1",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
   }
 }
