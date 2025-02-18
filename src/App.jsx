@@ -2,12 +2,14 @@ import "./style.css";
 import styled from "styled-components";
 
 const Button = styled.div`
-  background: papayawhip;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+
   font-size: 2rem;
   color: red;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  border: 1px solid black;
+
+  background: papayawhip;
 `;
 
 export default function App() {
