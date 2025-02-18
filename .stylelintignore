@@ -1,0 +1,8 @@
+.vscode
+.stylelintrc
+.eslintrc
+*.config.*
+
+node_modules
+webpack-dist
+
