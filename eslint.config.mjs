@@ -20,6 +20,7 @@ export default [
   },
   pluginJs.configs.recommended,
   pluginReact.configs.flat.recommended,
+  pluginReact.configs.flat["jsx-runtime"],
   pluginImport.flatConfigs.recommended,
   {
     files: ["src/**/*.{js,mjs,cjs,jsx}"],
