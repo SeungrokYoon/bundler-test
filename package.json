@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky",
     "babel:compile": "babel src --out-dir lib",
     "webpack:build": "webpack",
     "webpack:dev": "webpack-dev-server --mode development",
@@ -11,7 +11,9 @@
     "lint:css:fix": "stylelint './src/**/*.{ts,tsx,js,jsx}' --fix",
     "lint:eslint": "eslint . --fix --config eslint.config.mjs",
     "lint:prettier:fix": "prettier ./src --write",
-    "lint:prettier:check": "prettier ./src --check"
+    "lint:prettier:check": "prettier ./src --check",
+    "list-gone-branches": "git fetch -p && git branch -vv | awk '/: gone]/{print $1}'",
+    "delete-gone-branches": "git fetch -p && git branch -vv | awk '/: 삭제됨]|: gone]|: 없음]/{print $1}' | xargs git branch -D"
   },
   "keywords": [],
   "author": "Seungrok Yoon",
@@ -38,6 +40,8 @@
     "globals": "^15.15.0",
     "html-webpack-plugin": "^5.6.3",
     "http-server": "^14.1.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
     "postcss-styled-syntax": "^0.7.1",
     "prettier": "3.5.1",
     "style-loader": "^4.0.0",
