@@ -11,7 +11,9 @@
     "lint:css:fix": "stylelint './src/**/*.{ts,tsx,js,jsx}' --fix",
     "lint:eslint": "eslint . --fix --config eslint.config.mjs",
     "lint:prettier:fix": "prettier ./src --write",
-    "lint:prettier:check": "prettier ./src --check"
+    "lint:prettier:check": "prettier ./src --check",
+    "list-gone-branches": "git fetch -p && git branch -vv | awk '/: gone]/{print $1}'",
+    "delete-gone-branches": "git fetch -p && git branch -vv | awk '/: 삭제됨]|: gone]|: 없음]/{print $1}' | xargs git branch -D"
   },
   "keywords": [],
   "author": "Seungrok Yoon",
