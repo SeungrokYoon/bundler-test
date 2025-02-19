@@ -1,16 +1,31 @@
 {
+  // ✅ 기본 포맷터 설정
+  /**
+   * @see https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+   */
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  /**
+   * ✅ 저장 시 자동 포맷팅 설정
+   *
+   * eslint와 stylelint를 사용하여 저장 시 자동 포맷팅 설정
+   * @see https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+   */
   "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
     "source.fixAll.stylelint": "explicit"
   },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // prettier 설정을 프로젝트 내부에서 찾도록 설정
+  "prettier.requireConfig": true,
+
+  // ✅ stylelint 설정
   "stylelint.enable": true,
-  "stylelint.validate": [
-    "css",
-    "scss",
-    "postcss",
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
+  "stylelint.validate": ["css", "scss", "postcss", "javascript", "javascriptreact", "typescript", "typescriptreact"],
   "stylelint.customSyntax": "postcss-styled-syntax"
 }
