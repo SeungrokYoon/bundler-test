@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky",
     "babel:compile": "babel src --out-dir lib",
     "webpack:build": "webpack",
     "webpack:dev": "webpack-dev-server --mode development",
